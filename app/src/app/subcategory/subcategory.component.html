@@ -1,1 +1,18 @@
-<p>subcategory works!</p>
+<main>
+    <div>Listado de {{title}} disponibles</div>
+    <table>
+       <thead>
+        <tr><th>Id</th><th>Nombre</th><th>Subcategorias</th></tr>
+       </thead>
+       <tbody>
+        <tr *ngFor="let subcategory of listSubcategory">
+            <td>{{subcategory.id}}</td><td>{{subcategory.name}}</td>
+            <td>
+                <ul *ngFor="let theme of subcategory.subcategories">
+                    <ol id={{subcategory.id}}>{{subcategory.name}}</ol>
+                </ul>
+            </td>
+        </tr>
+       </tbody> 
+    </table>
+</main>

@@ -5,8 +5,13 @@
         <tr><th>Id</th><th>Nombre</th><th>Subcategorias</th></tr>
        </thead>
        <tbody>
-        <tr *ngFor>
-
+        <tr *ngFor="let category of listCategory">
+            <td>{{category.id}}</td><td>{{category.name}}</td>
+            <td>
+                <ul *ngFor="let subcategory of category.subcategories">
+                    <ol id={{subcategory.id}}>{{subcategory.name}}</ol>
+                </ul>
+            </td>
         </tr>
        </tbody> 
     </table>

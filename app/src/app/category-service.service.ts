@@ -6,5 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CategoryServiceService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient) { 
+
+  }
+  getAll(path:string){
+     return this.httpClient.get(path);
+  }
+
 }
